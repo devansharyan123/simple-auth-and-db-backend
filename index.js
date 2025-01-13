@@ -6,9 +6,11 @@ const { auth, JWT_secretKey } = require("./auth");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const {z} = require("zod");
+const dotenv = require("dotenv");
+require('dotenv').config();
 
 app.use(express.json());
-mongoose.connect("mongodb+srv://devansh123aryan:3iHAKjGLYtnlTz2D@cluster0.ormsu.mongodb.net/first-connection");
+mongoose.connect(process.env.MONGO_URI);
 
 app.post("/signup", async function (req, res) {
 const schema = z.object({
