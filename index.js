@@ -6,7 +6,7 @@ const { auth, JWT_secretKey } = require("./auth");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const {z} = require("zod");
-const dotenv = require("dotenv");
+
 require('dotenv').config();
 
 app.use(express.json());
