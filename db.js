@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 const ObjectId = mongoose.ObjectId;
 
 const Users = new Schema({
-    name : String,
+    username : String,
     password : String,
     email : {type : String , unique : true}
 })

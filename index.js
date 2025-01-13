@@ -43,13 +43,13 @@ if(!parseData.success){
 
 try{
     const email = req.body.email;
-    const name = req.body.name;
+    const username = req.body.username;
     const password = req.body.password;
     const hashedPassword = await bcrypt.hash(password,10)
 
     await UserModel.create({
         email: email,
-        name: name,
+        username: username,
         password: hashedPassword
     })
 
